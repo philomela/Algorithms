@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binary_Search", "Binary_Search\Binary_Search.csproj", "{C9AB8613-42C8-4CBB-A670-2B408B5D4A71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selection_Sort", "Selection_Sort\Selection_Sort.csproj", "{4B13C2FD-01BD-4D08-9B08-0265D6915151}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9AB8613-42C8-4CBB-A670-2B408B5D4A71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9AB8613-42C8-4CBB-A670-2B408B5D4A71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9AB8613-42C8-4CBB-A670-2B408B5D4A71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9AB8613-42C8-4CBB-A670-2B408B5D4A71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B13C2FD-01BD-4D08-9B08-0265D6915151}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B13C2FD-01BD-4D08-9B08-0265D6915151}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B13C2FD-01BD-4D08-9B08-0265D6915151}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B13C2FD-01BD-4D08-9B08-0265D6915151}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
