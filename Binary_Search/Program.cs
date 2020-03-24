@@ -12,7 +12,7 @@ namespace BinarySearch
 
             int[] inputArray = new int[arrayLength];
 
-            for (int i = 0; i <= inputArray.Length; i++)
+            for (int i = 0; i < inputArray.Length; i++)
             {
                 inputArray[i] = i;
             }
@@ -33,14 +33,27 @@ namespace BinarySearch
 
         public int FindItem(int guessedNumber)
         {
-            int minIndexArray = arrayForSearching[0];
-            int maxIndexArray = arrayForSearching.Length - 1;
-            int currentPosition = 0;
+            int minBorder = 0;
+            int maxBorder = arrayForSearching.Length - 1;
+            int midIndex = 0;
 
-            while (arrayForSearching[arrayForSearching.Length - 1 / 2] != guessedNumber)
+            
+
+            while (minBorder <= maxBorder)
             {
-                if (guessedNumber > arrayForSearching[currentPosition]) minIndexArray = arrayForSearching[arrayForSearching.Length - 1 / 2];
-
+                midIndex = (minBorder + maxBorder) / 2;
+                if (guessedNumber == arrayForSearching[midIndex])
+                {
+                    return midIndex;
+                }
+                else if (guessedNumber > arrayForSearching[midIndex])
+                {
+                    minBorder = midIndex;
+                }
+                else
+                {
+                    minBorder = midIndex;
+                }
             }
 
             return 0;
