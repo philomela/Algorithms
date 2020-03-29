@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Selection_Sort
 {
@@ -9,51 +10,73 @@ namespace Selection_Sort
             Console.WriteLine("Hello I'm Selection Sort Algorithm");
 
             Console.WriteLine("Enter number for lengths array");
-            int arrayLength = Convert.ToInt32(Console.ReadLine());
+            int listLength = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Please enter random numbers to fill an array");
-            int[] unsortedArray = new int[arrayLength];
-            for (int i = 0; i < unsortedArray.Length; i++)
+            List<int> unsortedList = new List<int>();
+            for (int i = 0; i < listLength; i++)
             {
                 Console.WriteLine("Enter number:");
-                unsortedArray[i] = Convert.ToInt32(Console.ReadLine());
+                unsortedList.Add(Convert.ToInt32(Console.ReadLine()));
             }
             Console.WriteLine("Thanks! Sorting...");
 
-            var selectionSort = new SelectionSortAlgorithm(unsortedArray);
+            var selectionSort = new SelectionSortAlgorithm(unsortedList);
             selectionSort.RunSort();
+            Console.WriteLine($"Sorted array: {selectionSort}");
         }
     }
 
     class SelectionSortAlgorithm
     {
-        private readonly int[] unsortedArray;
-        private int[] sortedArray;
+        private readonly List<int> unsortedList;
+        private List<int> sortedList;
+        private int countOperation;
+        private int countReqOperationsSort;
 
-        public SelectionSortAlgorithm(int[] inpArray)
+        public SelectionSortAlgorithm(List<int> inpList)
         {
-            unsortedArray = inpArray;
+            unsortedList = inpList;
+            sortedList = new List<int>();
+            countOperation = inpList.Count;
         }
 
-        private bool ComparisonElements(int currentElement, int inputElement)
+        private int FindSmallest()
         {
-            return true;
-        }
-       
-        public int[] RunSort()
-        {
+            int smallest = unsortedList[0];
+            int smallestIndex = 0;
 
-            return new int[3];
+            for (int i = 1; i < unsortedList.Count; i++)
+            {
+                countReqOperationsSort++;
+                if (unsortedList[i] < smallest)
+                {
+                    smallest = unsortedList[i];
+                    smallestIndex = i;
+                }
+            }
+            return smallestIndex;
+        }
+
+        public void RunSort()
+        {
+            for (int i = 0; i < countOperation; i++)
+            {
+                int smallest_index = FindSmallest();
+                sortedList.Add(unsortedList[smallest_index]);
+                unsortedList.RemoveAt(smallest_index);
+            }
+            Console.WriteLine($"Required operations for sort: {countReqOperationsSort}");
         }
 
         public override string ToString()
         {
-            string elementsArray = null;
-            for (int i = 0; i < sortedArray.Length; i++)
+            string elementsList = null;
+
+            for (int i = 0; i < sortedList.Count; i++)
             {
-                elementsArray = $"[{unsortedArray[i]}]"; 
+                elementsList += $"[{sortedList[i]}]";
             }
-            return elementsArray;
+            return elementsList;
         }
-        
     }
 }
