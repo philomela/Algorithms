@@ -32,9 +32,10 @@ namespace Bubble_Sort
             _unsortedArray = unsortedArray;
         }
 
-        public int[] SortRun()
+        public void SortRun()
         {
             int currentValue;
+            int counterOperations = 0;
             for (int i = 0; i < _unsortedArray.Length; i++)
             {
                 for (int j = 0; j < _unsortedArray.Length;)
@@ -46,9 +47,10 @@ namespace Bubble_Sort
                         _unsortedArray[j] = currentValue;                        
                     }
                     j++;
+                    counterOperations++;
                 }
-            }   
-            return null;
+            }
+            Console.WriteLine($"Required operations for sort: {counterOperations}");
         }
 
         public override string ToString()
