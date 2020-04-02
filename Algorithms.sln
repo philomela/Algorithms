@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selection_Sort", "Selection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bubble_Sort", "Bubble_Sort\Bubble_Sort.csproj", "{542D16E3-CDEA-4379-9711-356F1DFD0029}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cocktail_Sort", "Cocktail_Sort\Cocktail_Sort.csproj", "{ADB3F897-94AC-46F6-AD07-1B1075806DCD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,5 +27,9 @@ Global
 		{542D16E3-CDEA-4379-9711-356F1DFD0029}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{542D16E3-CDEA-4379-9711-356F1DFD0029}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{542D16E3-CDEA-4379-9711-356F1DFD0029}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADB3F897-94AC-46F6-AD07-1B1075806DCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADB3F897-94AC-46F6-AD07-1B1075806DCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADB3F897-94AC-46F6-AD07-1B1075806DCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADB3F897-94AC-46F6-AD07-1B1075806DCD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

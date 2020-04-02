@@ -36,19 +36,22 @@ namespace Bubble_Sort
         {
             int currentValue;
             int counterOperations = 0;
-            for (int i = 0; i < _unsortedArray.Length; i++)
+            int maxBorder = _unsortedArray.Length;
+
+            for (int i = 0; i < maxBorder; i++)
             {
-                for (int j = 0; j < _unsortedArray.Length;)
+                for (int j = i + 1; j < _unsortedArray.Length; j++, i++)
                 {
-                   if (j < _unsortedArray.Length - 1 && _unsortedArray[++j] < _unsortedArray[--j])
+                    if (_unsortedArray[i] > _unsortedArray[j])
                     {
-                        currentValue = _unsortedArray[j];
-                        _unsortedArray[j] = _unsortedArray[++j];
-                        _unsortedArray[j] = currentValue;                        
+                        currentValue = _unsortedArray[i];
+                        _unsortedArray[i] = _unsortedArray[j];
+                        _unsortedArray[j] = currentValue;
+                        counterOperations++;
                     }
-                    j++;
-                    counterOperations++;
                 }
+                maxBorder = --maxBorder;
+                i = -1;
             }
             Console.WriteLine($"Required operations for sort: {counterOperations}");
         }
