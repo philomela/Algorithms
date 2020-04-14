@@ -31,7 +31,6 @@ namespace Selection_Sort
         private readonly List<int> unsortedList;
         private List<int> sortedList;
         private int countOperation;
-        private int countReqOperationsSort;
 
         public SelectionSortAlgorithm(List<int> inpList)
         {
@@ -47,7 +46,6 @@ namespace Selection_Sort
 
             for (int i = 1; i < unsortedList.Count; i++)
             {
-                countReqOperationsSort++;
                 if (unsortedList[i] < smallest)
                 {
                     smallest = unsortedList[i];
@@ -65,7 +63,6 @@ namespace Selection_Sort
                 sortedList.Add(unsortedList[smallest_index]);
                 unsortedList.RemoveAt(smallest_index);
             }
-            Console.WriteLine($"Required operations for sort: {countReqOperationsSort}");
         }
 
         public override string ToString()

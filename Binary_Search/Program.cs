@@ -40,16 +40,12 @@ namespace BinarySearch
             int minBorder = 0;
             int maxBorder = arrayForSearching.Length - 1;
             int midIndex = 0;
-            int countIterator = 0;
-            
 
             while (minBorder <= maxBorder)
             {
-                countIterator++;
                 midIndex = (minBorder + maxBorder) / 2;
                 if (guessedNumber == arrayForSearching[midIndex])
                 {
-                    Console.WriteLine($"Quantity operation: {countIterator}");
                     return midIndex;
                 }
                 else if (guessedNumber > arrayForSearching[midIndex])

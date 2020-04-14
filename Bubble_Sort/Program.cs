@@ -35,7 +35,6 @@ namespace Bubble_Sort
         public void SortRun()
         {
             int currentValue;
-            int counterOperations = 0;
             int maxBorder = _unsortedArray.Length;
 
             for (int i = 0; i < maxBorder; i++)
@@ -47,13 +46,11 @@ namespace Bubble_Sort
                         currentValue = _unsortedArray[i];
                         _unsortedArray[i] = _unsortedArray[j];
                         _unsortedArray[j] = currentValue;
-                        counterOperations++;
                     }
                 }
                 maxBorder = --maxBorder;
                 i = -1;
             }
-            Console.WriteLine($"Required operations for sort: {counterOperations}");
         }
 
         public override string ToString()

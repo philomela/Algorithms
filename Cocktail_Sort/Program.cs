@@ -19,7 +19,6 @@ namespace Cocktail_Sort
 
             var cocktailSortAlgorithm = new CocktailSort(unsortedArray);
             cocktailSortAlgorithm.SortRun();
-            Console.WriteLine($"Required operations for sort: {cocktailSortAlgorithm.CounterOperations}");
             Console.WriteLine(cocktailSortAlgorithm);
         }
     }
@@ -42,7 +41,6 @@ namespace Cocktail_Sort
         {
             for (int i = minBorder; i <= maxBorder; i++)
             {
-                CounterOperations++;
                 if (i != maxBorder)
                 {
                     if (_unsortedArray[i] > _unsortedArray[++i])
